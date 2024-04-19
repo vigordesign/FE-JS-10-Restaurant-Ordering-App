@@ -19,9 +19,11 @@ function getFeedHtml() {
                     <p>${item.ingredients}</p>
                     <p>${item.price}</p>
                 </div>
+                <div class="add-to-order">
+                    <button class="add-to-order-btn">+</button>
+                </div>
             </div>
         `
-
     })
 
     return menuHtml

@@ -7,6 +7,7 @@ body {
 .single-menu-item {
     border-bottom: 1px solid #000;
     background-color: #fff;
+    align-content: center;
 }
 
 .single-menu-item {
@@ -15,4 +16,25 @@ body {
 
 .menu-item-image {
     font-size: 80px;
+    align-self: center;
+}
+
+.menu-item-details {
+    width: 358px;
+}
+
+.add-to-order {
+    align-self: center;
+}
+
+.add-to-order-btn{
+    background-color: #fff;
+    border: solid 1px #DEDEDE;
+    /* color: #a7a3a3; */
+    padding: 15px 15px;
+    border-radius: 50%;
+    width: 50px; 
+    cursor: pointer;
+    /* font-size: 20px; */
+    /* font-weight: 600; */
 }
