@@ -16,8 +16,8 @@ function getFeedHtml() {
                 </div>
                 <div class="menu-item-details">
                     <h3>${item.name}</h3>
-                    <p>${item.ingredients}</p>
-                    <p>${item.price}</p>
+                    <p class="ingredients-text">${item.ingredients.join(', ')}</p>
+                    <p class="price-text">$${item.price}</p>
                 </div>
                 <div class="add-to-order">
                     <button class="add-to-order-btn">+</button>
