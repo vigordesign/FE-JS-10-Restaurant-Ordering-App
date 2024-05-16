@@ -5,7 +5,7 @@ import menuArray from './data.js'
 
 document.addEventListener('click', function(e){
     //console.log('clicky')
-    console.log(e.target.dataset.id)
+    //console.log(e.target.dataset.id)
     if(e.target.dataset.id) {
         handleAddButtonClick(e.target.dataset.id)
     } 
@@ -13,10 +13,11 @@ document.addEventListener('click', function(e){
 
 ///////// Click Function /////////
 
-function handleAddButtonClick(e) {
-    if(e.target.dataset.id){ // FIGURE OUT THIS PART NEXT!!!!! Watch the scrimba section!! YAY!!
-        console.log('click button 1!')
-    }
+function handleAddButtonClick(id) {
+    console.log(id)
+    // if(e.target.dataset.id){ // FIGURE OUT THIS PART NEXT!!!!! Watch the scrimba section!! YAY!!
+    //     console.log(id)
+    // }
     
 }
 
