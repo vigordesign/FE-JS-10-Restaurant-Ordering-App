@@ -1,5 +1,25 @@
 import menuArray from './data.js'
 
+
+///////// Event Listeners /////////
+
+document.addEventListener('click', function(e){
+    //console.log('clicky')
+    console.log(e.target.dataset.id)
+    if(e.target.dataset.id) {
+        handleAddButtonClick(e.target.dataset.id)
+    } 
+})
+
+///////// Click Function /////////
+
+function handleAddButtonClick(e) {
+    if(e.target.dataset.id){ // FIGURE OUT THIS PART NEXT!!!!! Watch the scrimba section!! YAY!!
+        console.log('click button 1!')
+    }
+    
+}
+
 ///////// Build the feed! /////////
 
 function getFeedHtml() {
@@ -20,7 +40,7 @@ function getFeedHtml() {
                     <p class="price-text">$${item.price}</p>
                 </div>
                 <div class="add-to-order">
-                    <button class="add-to-order-btn">+</button>
+                    <button class="add-to-order-btn" data-id="${item.id}">+</button>
                 </div>
             </div>
         `
