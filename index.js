@@ -1,5 +1,6 @@
 import menuArray from './data.js'
 
+let orderArray = [] //create orderArray!
 
 ///////// Event Listeners /////////
 
@@ -7,18 +8,19 @@ document.addEventListener('click', function(e){
     //console.log('clicky')
     //console.log(e.target.dataset.id)
     if(e.target.dataset.id) {
-        handleAddButtonClick(e.target.dataset.id)
+        handleAddButtonClick(e.target.dataset.id) //only clicks that come from these buttons! Because of the data attibute!! 
     } 
 })
 
 ///////// Click Function /////////
 
-function handleAddButtonClick(id) {
-    console.log(id)
-    // if(e.target.dataset.id){ // FIGURE OUT THIS PART NEXT!!!!! Watch the scrimba section!! YAY!!
-    //     console.log(id)
-    // }
+function handleAddButtonClick(e) {
+    console.log(e)
+    let selectedItem = (e)
+    orderArray.push(selectedItem) //Push it to the array
+    console.log(orderArray) //log the array! It's working!!! YAY!!!
     
+    // Now make those show up on the page! With the name!!
 }
 
 ///////// Build the feed! /////////
