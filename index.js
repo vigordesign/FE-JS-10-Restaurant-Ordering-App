@@ -15,11 +15,19 @@ document.addEventListener('click', function(e){
 ///////// Click Function /////////
 
 function handleAddButtonClick(e) {
-    console.log(e)
     let selectedItem = (e)
     orderArray.push(selectedItem) //Push it to the array
-    console.log(orderArray) //log the array! It's working!!! YAY!!!
+    //console.log(orderArray) //log the array! It's working!!! YAY!!!
     
+    // iterate over the array to turn it into a string! like you have ordered x, x, and x in your cart
+    const buildOrder = orderArray.map(function(orderItem){
+        //console.log(orderItem)
+        //what's the function that goes here? haha it needs to do something? Push it to the html? Or make it a string?
+    } )
+    console.log(buildOrder)
+    // This didn't work hahaha! Sophie's waking up so I can't focus hahaha
+
+
     // Now make those show up on the page! With the name!!
 }
 
