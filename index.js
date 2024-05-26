@@ -17,16 +17,15 @@ document.addEventListener('click', function(e){
 function handleAddButtonClick(e) {
     let selectedItem = (e)
     orderArr.push(selectedItem) //Push it to the array
-    console.log(orderArr) //log the array! It's working!!! YAY!!!
+    //console.log(orderArr) //log the array! It's working!!! YAY!!!
 
-    // iterate over the array to turn it into a string!
-    // const buildOrder = orderArr.map(function(orderItem){
-    //     console.log(orderItem) 
-    //     // ok this works! The function should find the name of each item id!
-    //     // this is adding 
-    //     //orderItem.id
-    // } )
-    //console.log(buildOrder)
+    //iterate over the array to turn it into a string!
+    const buildOrder = orderArr.map(function(orderItem){
+        console.log(orderItem) 
+        // ok this works! The function should find the name of each item id!
+        return `${orderItem.name}` //maybe? hahaha
+    } )
+    console.log(buildOrder)
 
     // Now make those show up on the page! With the name!!
 }
