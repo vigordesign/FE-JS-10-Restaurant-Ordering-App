@@ -5,8 +5,6 @@ let orderArr = [] //create orderArray!
 ///////// Event Listeners /////////
 
 document.addEventListener('click', function(e){
-    //console.log('clicky')
-    //console.log(e.target.dataset.id)
     if(e.target.dataset.id) {
         handleAddButtonClick(e.target.dataset.id) //only clicks that come from these buttons! Because of the data attibute!! 
     } 
@@ -21,14 +19,29 @@ function handleAddButtonClick(e) {
 
     //iterate over the array to turn it into a string!
     const buildOrder = orderArr.map(function(orderItem){
-        console.log(orderItem) 
-        // ok this works! The function should find the name of each item id!
-        return `${orderItem.name}` //maybe? hahaha
+        return `${orderItem}` //assign a value
     } )
-    console.log(buildOrder)
-
-    // Now make those show up on the page! With the name!!
+    console.log(`Build order: ${buildOrder}`)
+    document.getElementById("build-order").style.display = "flex" // DOES THIS WORK?
 }
+
+// Now make the order items show up on the page! With the name!!
+
+function renderOrder() {
+    let orderHtml = ""
+
+    orderArr.forEach( (orderItem) => {
+        orderHtml+=`
+            <div class="order">
+                <p class="order-item">${orderItem.name}</p>
+            </div>`
+        })
+
+    //return orderHtml
+    console.log(orderHtml) // IT'S EMPTY?
+    document.getElementById("build-order").innerHTML = orderHtml
+}
+renderOrder()
 
 ///////// Build the feed! /////////
 
@@ -36,8 +49,7 @@ function getFeedHtml() {
 
     let menuHtml = ''
 
-    menuArray.forEach(function(item) {   
-        //console.log(item)                                         
+    menuArray.forEach(function(item) {                                         
         
         menuHtml+=`
             <div class="single-menu-item">
@@ -67,8 +79,5 @@ function renderMenu() {
 renderMenu()
 
 //to do!
-// get the content to show up again! Anything from the menuHTML!
-// get the image from the array on line 11! Connect it to the array in the other file!
-    // it's connected but displaying the javascript on the page instead of excuting it! haha
-    // YAY! I was returning getFeedHTML on line 22 instead of menuItem! YAY!!!!
-// get the images to display!
+// Line 41, it's empty
+// Line 25, show the div? 
