@@ -22,7 +22,8 @@ function handleAddButtonClick(e) {
         return `${orderItem}` //assign a value
     } )
     console.log(`Build order: ${buildOrder}`)
-    document.getElementById("build-order").style.display = "flex" // DOES THIS WORK?
+    document.getElementById("build-order").style.display = "flex"
+    renderOrder() //is this hoisting bad?
 }
 
 // Now make the order items show up on the page! With the name!!
@@ -30,18 +31,18 @@ function handleAddButtonClick(e) {
 function renderOrder() {
     let orderHtml = ""
 
-    orderArr.forEach( (orderItem) => {
+    orderArr.forEach((orderItem) => {
         orderHtml+=`
             <div class="order">
-                <p class="order-item">${orderItem.name}</p>
+                <p class="order-item">order item: ${orderItem}</p>
             </div>`
         })
 
     //return orderHtml
-    console.log(orderHtml) // IT'S EMPTY?
+    //console.log(`order HTML: ${orderHtml}`)
     document.getElementById("build-order").innerHTML = orderHtml
 }
-renderOrder()
+
 
 ///////// Build the feed! /////////
 
@@ -78,6 +79,6 @@ function renderMenu() {
 
 renderMenu()
 
-//to do!
-// Line 41, it's empty
-// Line 25, show the div? 
+// TO DO
+// It's better! 
+// Now, orderArr never has the NAMES from menuArray

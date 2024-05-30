@@ -28,14 +28,13 @@ header h2{
     left: 46px;
 }
 
-.item-list {
+.item-list, .single-menu-item, .add-to-order-btn, .build-order {
     background-color: #fff;
 }
 
 .single-menu-item {
     display: flex;
     border-bottom: 1px solid #D2D2D2;
-    background-color: #fff;
     align-content: center;
     justify-content: space-evenly;
     width: 90%;
@@ -73,7 +72,6 @@ header h2{
 }
 
 .add-to-order-btn{
-    background-color: #fff;
     border: solid 1px #DEDEDE;
     border-radius: 50%;
     width: 50px;
@@ -84,4 +82,8 @@ header h2{
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
+}
+
+.build-order {
+    flex-direction: column;
 }
