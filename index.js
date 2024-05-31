@@ -14,6 +14,13 @@ document.addEventListener('click', function(e){
 
 function handleAddButtonClick(e) {
     let selectedItem = (e)
+    menuArray.filter(function(itemName){
+        return itemName === menuArray.name
+    })
+    console.log(itemName) //undefined!!!
+    //console.log(`e: ${e}`)
+
+    
     orderArr.push(selectedItem) //Push it to the array
     //console.log(orderArr) //log the array! It's working!!! YAY!!!
 
